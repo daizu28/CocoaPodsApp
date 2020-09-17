@@ -16,9 +16,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        HUD.flash(.success, delay: 10.0)
+       
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        //viewDidAppearのタイミングでHUDの表示
+        HUD.flash(.success, delay: 2.0)
+    }
 
 }
 
